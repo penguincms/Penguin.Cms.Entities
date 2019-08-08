@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Penguin.Cms.Entities</name>
+    </assembly>
+    <members>
+        <member name="T:Penguin.Cms.Entities.UserAuditableEntity">
+            <summary>
+            Base class for any entity that should have all changes logged along with identifying information of the person that made those changes
+            </summary>
+        </member>
+        <member name="P:Penguin.Cms.Entities.UserAuditableEntity.Creator">
+            <summary>
+            The Guid of the user that created the object
+            </summary>
+        </member>
+        <member name="P:Penguin.Cms.Entities.UserAuditableEntity.Deleter">
+            <summary>
+            The Guid of the user that deleted the object
+            </summary>
+        </member>
+        <member name="P:Penguin.Cms.Entities.UserAuditableEntity.IPCreated">
+            <summary>
+            The IP address of the user that created the object
+            </summary>
+        </member>
+        <member name="P:Penguin.Cms.Entities.UserAuditableEntity.IPDeleted">
+            <summary>
+            The IP Address of the user that deleted the object
+            </summary>
+        </member>
+        <member name="P:Penguin.Cms.Entities.UserAuditableEntity.IPModified">
+            <summary>
+            The IP Address of the last user to make changes to the object
+            </summary>
+        </member>
+        <member name="P:Penguin.Cms.Entities.UserAuditableEntity.LastModifier">
+            <summary>
+            The Guid of the last user to make changes to the object
+            </summary>
+        </member>
+    </members>
+</doc>
