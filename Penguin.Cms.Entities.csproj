@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,27 +8,27 @@
     <PackageProjectUrl>http://www.penguinms.com/Nuget</PackageProjectUrl>
     <PackageIconUrl>http://www.penguinms.com/client/images/pg.png</PackageIconUrl>
     <Description>Contains a base class intended to be used in CMS systems to audit user interactions and modifications, an extension of Penguin.Entities</Description>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Penguin.Cms.Attributes" Version="1.0.4" />
-    <PackageReference Include="Penguin.Entities" Version="1.0.8" />
+    <PackageReference Include="Penguin.Entities" Version="1.0.9" />
     <PackageReference Include="Penguin.Persistence.Abstractions" Version="1.2.8" />
   </ItemGroup>
 
  <ItemGroup>
-    <None Include="..\License.txt">
+    <None Include="License.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningsAsErrors>NU1605, CS1591</WarningsAsErrors>
-    <DocumentationFile>C:\SVN\Framework\Nuget\Penguin.Cms.Entities\Penguin.Cms.Entities.xml</DocumentationFile>
+    <DocumentationFile>Penguin.Cms.Entities.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>full</DebugType>
-    <DocumentationFile>C:\SVN\Framework\Nuget\Penguin.Cms.Entities\Penguin.Cms.Entities.xml</DocumentationFile>
+    <DocumentationFile>Penguin.Cms.Entities.xml</DocumentationFile>
   </PropertyGroup>
 </Project>
