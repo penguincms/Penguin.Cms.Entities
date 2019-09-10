@@ -5,16 +5,19 @@
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>http://www.penguinms.com/Nuget</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/penguincms/Penguin.Cms.Entities</PackageProjectUrl>
     <PackageIconUrl>http://www.penguinms.com/client/images/pg.png</PackageIconUrl>
     <Description>Contains a base class intended to be used in CMS systems to audit user interactions and modifications, an extension of Penguin.Entities</Description>
     <Version>1.0.6</Version>
+	<IncludeSymbols>true</IncludeSymbols>    
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Penguin.Cms.Attributes" Version="1.0.4" />
     <PackageReference Include="Penguin.Entities" Version="1.0.9" />
-    <PackageReference Include="Penguin.Persistence.Abstractions" Version="1.2.8" />
+    <PackageReference Include="Penguin.Persistence.Abstractions" Version="1.3.0" />
   </ItemGroup>
 
  <ItemGroup>
