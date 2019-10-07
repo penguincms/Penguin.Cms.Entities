@@ -4,11 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/penguincms/Penguin.Cms.Entities</PackageProjectUrl>
     <Description>Contains a base class intended to be used in CMS systems to audit user interactions and modifications, an extension of Penguin.Entities</Description>
-    <Version>2.0.1</Version>
+    <Version>3.0.2</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Penguin.Cms.Attributes" Version="2.0.0" />
-    <PackageReference Include="Penguin.Entities" Version="2.0.1" />
-    <PackageReference Include="Penguin.Persistence.Abstractions" Version="2.1.5" />
+    <PackageReference Include="Penguin.Persistence.Abstractions" Version="3.0.0" />
   </ItemGroup>
 </Project>
