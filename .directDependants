@@ -1,5 +1,6 @@
 Penguin.Cms.Auditing
 Penguin.Cms.Communication
+Penguin.Cms.Configuration
 Penguin.Cms.Email.Templating
 Penguin.Cms.Errors
 Penguin.Cms.Files
@@ -7,6 +8,9 @@ Penguin.Cms.Forms
 Penguin.Cms.Images
 Penguin.Cms.InternalMessaging
 Penguin.Cms.Logging
+Penguin.Cms.Logging.Entities
+Penguin.Cms.Modules.Admin
+Penguin.Cms.Modules.Dynamic
 Penguin.Cms.Navigation
 Penguin.Cms.Pages
 Penguin.Cms.Reporting
