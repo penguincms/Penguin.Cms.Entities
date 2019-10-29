@@ -7,6 +7,6 @@
     <Version>3.0.3</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Penguin.Persistence.Abstractions" Version="3.0.1-T9LXGUJ" />
+    <PackageReference Include="Penguin.Persistence.Abstractions" Version="3.0.2-T9M1HHH" />
   </ItemGroup>
 </Project>
