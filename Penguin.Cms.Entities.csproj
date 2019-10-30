@@ -5,8 +5,10 @@
     <PackageProjectUrl>https://github.com/penguincms/Penguin.Cms.Entities</PackageProjectUrl>
     <Description>Contains a base class intended to be used in CMS systems to audit user interactions and modifications, an extension of Penguin.Entities</Description>
     <Version>3.0.3</Version>
+    <AssemblyName>Penguin.Cms.Entities</AssemblyName>
+    <RootNamespace>Penguin.Cms.Entities</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Penguin.Persistence.Abstractions" Version="3.0.2-T9M1HHH" />
+    <PackageReference Include="Penguin.Persistence.Abstractions" Version="3.0.2-T9M2XAX" />
   </ItemGroup>
 </Project>
