@@ -133,6 +133,6 @@ namespace Penguin.Cms.Entities
         /// </summary>
         [DontAllow(DisplayContexts.List | DisplayContexts.Edit)]
         [Display(Name = "Date Created")]
-        public DateTime DateCreated { get; set; } = DateTime.Now;
+        public virtual DateTime DateCreated { get; set; } = DateTime.Now;
     }
 }
