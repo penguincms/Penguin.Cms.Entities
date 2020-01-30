@@ -7,6 +7,7 @@
     <Version>3.0.3</Version>
     <AssemblyName>Penguin.Cms.Entities</AssemblyName>
     <RootNamespace>Penguin.Cms.Entities</RootNamespace>
+    <DocumentationFile>Penguin.Cms.Entities.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Penguin.Persistence.Abstractions" Version="3.0.2-T9QC72V" />
