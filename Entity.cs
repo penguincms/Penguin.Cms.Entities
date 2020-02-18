@@ -8,7 +8,6 @@ using System;
 
 namespace Penguin.Cms.Entities
 {
-
     /// <summary>
     /// The base Penguin.Entity class containing all the information/Keys for the Penuin CMS
     /// </summary>
@@ -125,14 +124,14 @@ namespace Penguin.Cms.Entities
 
         #endregion Methods
 
-        [DontAllow(DisplayContexts.Any)]
-        private string _typeName { get; set; }
-
         /// <summary>
         /// The date the entity was first created
         /// </summary>
         [DontAllow(DisplayContexts.List | DisplayContexts.Edit)]
         [Display(Name = "Date Created")]
         public virtual DateTime DateCreated { get; set; } = DateTime.Now;
+
+        [DontAllow(DisplayContexts.Any)]
+        private string _typeName { get; set; }
     }
 }
