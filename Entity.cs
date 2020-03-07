@@ -42,13 +42,13 @@ namespace Penguin.Cms.Entities
         {
             get
             {
-                if (this._typeName == null || string.IsNullOrEmpty(this._typeName))
+                if (this.typeName == null || string.IsNullOrEmpty(this.typeName))
                 {
-                    this._typeName = this.GetType().Module.ScopeName == "EntityProxyModule" ? this.GetType().BaseType.FullName : this.GetType().FullName;
+                    this.typeName = this.GetType().Module.ScopeName == "EntityProxyModule" ? this.GetType().BaseType.FullName : this.GetType().FullName;
                 }
-                return this._typeName;
+                return this.typeName;
             }
-            set => this._typeName = value;
+            set => this.typeName = value;
         }
 
         #endregion Properties
@@ -120,7 +120,10 @@ namespace Penguin.Cms.Entities
         /// Returns the Guid HashCode
         /// </summary>
         /// <returns>the Guid Hashcode</returns>
-        public override int GetHashCode() => this.Guid.GetHashCode();
+        public override int GetHashCode()
+        {
+            return this.Guid.GetHashCode();
+        }
 
         #endregion Methods
 
@@ -131,7 +134,6 @@ namespace Penguin.Cms.Entities
         [Display(Name = "Date Created")]
         public virtual DateTime DateCreated { get; set; } = DateTime.Now;
 
-        [DontAllow(DisplayContexts.Any)]
-        private string _typeName { get; set; }
+        private string typeName;
     }
 }
