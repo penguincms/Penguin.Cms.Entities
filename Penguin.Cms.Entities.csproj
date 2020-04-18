@@ -10,6 +10,6 @@
     <DocumentationFile>Penguin.Cms.Entities.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Penguin.Persistence.Abstractions" Version="3.0.2-T9UFJ6O" />
+    <PackageReference Include="Penguin.Persistence.Abstractions" Version="3.0.2-T9UPDS1" />
   </ItemGroup>
 </Project>
