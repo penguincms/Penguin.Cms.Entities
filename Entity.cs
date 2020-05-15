@@ -127,13 +127,13 @@ namespace Penguin.Cms.Entities
 
         #endregion Methods
 
+        private string typeName;
+
         /// <summary>
         /// The date the entity was first created
         /// </summary>
         [DontAllow(DisplayContexts.List | DisplayContexts.Edit)]
         [Display(Name = "Date Created")]
         public virtual DateTime DateCreated { get; set; } = DateTime.Now;
-
-        private string typeName;
     }
 }
