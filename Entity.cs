@@ -30,7 +30,6 @@ namespace Penguin.Cms.Entities
         [DontAllow(DisplayContexts.Edit | DisplayContexts.List)]
         [Display(Name = "Unique Id")]
         [Index(IsUnique = true)]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "CA1720:Identifier contains type name", Justification = "Named for importance and distinction")]
         public virtual Guid Guid { get; set; } = Guid.NewGuid();
 
         /// <summary>

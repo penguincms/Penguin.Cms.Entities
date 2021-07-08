@@ -2,7 +2,7 @@
   <Import Project="Penguin.Projects.Shared\Penguin.Projects.Shared.csproj" />
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageProjectUrl>https://github.com/penguincms/Penguin.Cms.Entities</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/PenguinCMS/Penguin.Cms.Entities</PackageProjectUrl>
     <Description>Contains a base class intended to be used in CMS systems to audit user interactions and modifications, an extension of Penguin.Entities</Description>
     <Version>5.0.5</Version>
     <AssemblyName>Penguin.Cms.Entities</AssemblyName>
