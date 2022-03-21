@@ -119,10 +119,7 @@ namespace Penguin.Cms.Entities
         /// Returns the Guid HashCode
         /// </summary>
         /// <returns>the Guid Hashcode</returns>
-        public override int GetHashCode()
-        {
-            return this.Guid.GetHashCode();
-        }
+        public override int GetHashCode() => this.Guid.GetHashCode();
 
         #endregion Methods
 
