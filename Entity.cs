@@ -29,7 +29,7 @@ namespace Penguin.Cms.Entities
         /// </summary>
         [DontAllow(DisplayContexts.Edit | DisplayContexts.List)]
         [Display(Name = "Unique Id")]
-        [Index(IsUnique = true)]
+        [Index(true)]
         public virtual Guid Guid { get; set; } = Guid.NewGuid();
 
         /// <summary>
@@ -41,13 +41,13 @@ namespace Penguin.Cms.Entities
         {
             get
             {
-                if (this.typeName == null || string.IsNullOrEmpty(this.typeName))
+                if (typeName == null || string.IsNullOrEmpty(typeName))
                 {
-                    this.typeName = this.GetType().Module.ScopeName == "EntityProxyModule" ? this.GetType().BaseType.FullName : this.GetType().FullName;
+                    typeName = GetType().Module.ScopeName == "EntityProxyModule" ? GetType().BaseType.FullName : GetType().FullName;
                 }
-                return this.typeName;
+                return typeName;
             }
-            set => this.typeName = value;
+            set => typeName = value;
         }
 
         #endregion Properties
@@ -62,18 +62,7 @@ namespace Penguin.Cms.Entities
         /// <returns>Inequality</returns>
         public static bool operator !=(Entity obj1, Entity obj2)
         {
-            if (obj1 is null ^ obj2 is null)
-            {
-                return true;
-            }
-            else if (obj1 is null && obj2 is null)
-            {
-                return false;
-            }
-            else
-            {
-                return obj1?.GetHashCode() != obj2?.GetHashCode();
-            }
+            return obj1 is null ^ obj2 is null || (obj1 is not null || obj2 is not null) && obj1?.GetHashCode() != obj2?.GetHashCode();
         }
 
         /// <summary>
@@ -84,18 +73,7 @@ namespace Penguin.Cms.Entities
         /// <returns>equality</returns>
         public static bool operator ==(Entity obj1, Entity obj2)
         {
-            if (obj1 is null ^ obj2 is null)
-            {
-                return false;
-            }
-            else if (obj1 is null && obj2 is null)
-            {
-                return true;
-            }
-            else
-            {
-                return obj1?.GetHashCode() == obj2?.GetHashCode();
-            }
+            return !(obj1 is null ^ obj2 is null) && ((obj1 is null && obj2 is null) || obj1?.GetHashCode() == obj2?.GetHashCode());
         }
 
         /// <summary>
@@ -105,14 +83,7 @@ namespace Penguin.Cms.Entities
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if (obj is null || !(obj is Entity))
-            {
-                return false;
-            }
-            else
-            {
-                return ReferenceEquals(this, obj) || (obj as Entity)?.GetHashCode() == this.GetHashCode();
-            }
+            return obj is not null && obj is Entity && (ReferenceEquals(this, obj) || (obj as Entity)?.GetHashCode() == GetHashCode());
         }
 
         /// <summary>
@@ -121,7 +92,7 @@ namespace Penguin.Cms.Entities
         /// <returns>the Guid Hashcode</returns>
         public override int GetHashCode()
         {
-            return this.Guid.GetHashCode();
+            return Guid.GetHashCode();
         }
 
         #endregion Methods

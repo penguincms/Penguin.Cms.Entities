@@ -36,7 +36,7 @@ namespace Penguin.Cms.Entities
         /// A quick way to check if the DateDeleted has a value
         /// </summary>
         [DontAllow(DisplayContexts.Any)]
-        public bool IsDeleted => this.DateDeleted.HasValue;
+        public bool IsDeleted => DateDeleted.HasValue;
 
         #endregion Properties
     }
